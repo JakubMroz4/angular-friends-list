@@ -12,6 +12,7 @@ export class AppComponent {
   favorite: string | null = null;
 
   people: string[] = ['lewis', 'jules', 'ed', 'nathan', 'dave', 'nigel'];
+  favorites: string[] = [];
 
   addFriend() {
     if (!this.newFriend) {
@@ -22,7 +23,9 @@ export class AppComponent {
   }
 
   setFavorite(friend: string) {
-    this.favorite = friend;
-    console.log('favorite:', this.favorite);
+    if (!this.favorites.includes(friend)) {
+      this.favorites.push(friend);
+      console.log('favorite:', this.favorite);
+    }
   }
 }
