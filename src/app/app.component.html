@@ -11,7 +11,7 @@
   <div *ngFor="let person of people">
     <app-people
       [name]="person"
-      (markFavorite)="setFavorite(person)"
+      (setFavorite)="setFavorite(person)"
     ></app-people>
   </div>
 </div>

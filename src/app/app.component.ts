@@ -23,5 +23,6 @@ export class AppComponent {
 
   setFavorite(friend: string) {
     this.favorite = friend;
+    console.log('favorite:', this.favorite);
   }
 }
