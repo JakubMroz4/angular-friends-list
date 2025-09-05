@@ -1,7 +1,9 @@
 import { Component } from '@angular/core';
+import { PeopleComponent } from './people/people.component';
 
 @Component({
   selector: 'app-root',
+  standalone: false,
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
 })
@@ -17,5 +19,9 @@ export class AppComponent {
     }
     this.people.push(this.newFriend);
     this.newFriend = null;
+  }
+
+  setFavorite(friend: string) {
+    this.favorite = friend;
   }
 }
